@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: white
+}
+
+.main {
+  max-width: 1300px;
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+}
+
+img {
+  object-fit: cover;
+}
+.followbtn{
+  background-color: #3c68b1;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  height: 2.5rem;
+  width: 6rem;
+  padding: 5px 5px 5px 5px;
+}
+
+.followbtn:hover {
+  color:  #3c68b1;
+  outline: 1px solid #3c68b1;
+  background-color: white;
+  height: 2.5rem;
+  width: 6rem;
+  border-radius: 5px;
+  border: none;
+ 
+}
+
+.btnLoadMore{
+  background-color: #3c68b1;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  height: 2.5rem;
+  width: 6rem;
+  padding: 5px 5px 5px 5px;
+}
+
+.btnLoadMore:hover{
+  color:  #3c68b1;
+  outline: 1px solid #3c68b1;
+  background-color: white;
+  height: 2.5rem;
+  width: 6rem;
+  border-radius: 5px;
+  border: none;
+ 
+}
+/* -------- AUTH ---------- */
+@import url("./auth.css");
+
+/* -------- LOADING ---------- */
+@import url("./loading.css");
+
+/* -------- Header ---------- */
+@import url("./header.css");
+
+/* -------- Avatar ---------- */
+@import url("./avatar.css");
+
+/* -------- Header ---------- */
+@import url("./header.css");
+
+/* -------- Profile ---------- */
+@import url("./profile.css");
+
+/* -------- Home ---------- */
+@import url("./home.css");
+
+/* -------- Status Modal ---------- */
+@import url("./status_modal.css");
+
+/* -------- Comments ---------- */
+@import url("./comments.css");
+
+/* -------- Post Thumb ---------- */
+@import url("./post_thumb.css");
+
+/* -------- Message---------- */
+@import url("./message.css");
+
+/* -------- Icons---------- */
+@import url("./icons.css");
+
+/* -------- Call Modal---------- */
+@import url("./call_modal.css");
+
+
+
+/* --------- Responsive ------ */
+@media (max-width: 766px){
+  .header .navbar .logo{
+    display: none;
+  }
+  .header .menu{
+      width: 100%;
+      height: 40px;
+  }
+  .header .menu .navbar-nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  .header .search_form{
+      width: 100%;
+  }
+  .header .logo{
+      margin: auto;
+  }
+  .header .logo h1{
+      font-size: 1.5rem;
+  }
+  
+  .message{
+    height: calc(100vh - 100px);
+  }
+  .right_mess,
+  .left_mess{
+    display: none;
+  }
+  .status{
+    padding: 20px 10px;
+  }
+}
+
+.mode{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* --------------Dark Mode------------------*/
+#darkmode{
+  display: flex;
+  justify-content: center;
+}
+
+#darkmode .dark {
+  background-color: #292c35;
+}
+#darkmode .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+#darkmode .label {
+  width: 48px;
+  height: 24px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+#darkmode .ball {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+#darkmode .checkbox:checked + .label .ball{
+  transform: translateX(24px);
+}
